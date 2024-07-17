@@ -22,7 +22,6 @@ class _ReelsScreenState extends State<ReelsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Reels', style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.black,
       ),
       body: BlocBuilder<ReelsCubit, ReelsState>(
         builder: (context, state) {
