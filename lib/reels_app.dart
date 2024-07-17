@@ -16,6 +16,11 @@ class ReelsApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Reels App',
+        theme: ThemeData(
+            scaffoldBackgroundColor: Colors.black,
+            appBarTheme: const AppBarTheme(
+              backgroundColor: Colors.black,
+            )),
         home: BlocProvider(
           create: (context) => ReelsCubit(),
           child: ReelsScreen(),

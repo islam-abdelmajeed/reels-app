@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:reels_app/features/reels/widgets/reels_actions_widget.dart';
+import 'package:reels_app/features/reels/widgets/reels_user_data.dart';
 import 'package:video_player/video_player.dart';
 import '../../../core/utils/cache_config.dart';
 
@@ -47,17 +50,26 @@ class _ReelItemState extends State<ReelItem> {
 
   @override
   Widget build(BuildContext context) {
-    return _controller != null && _controller!.value.isInitialized
-        ? AspectRatio(
-            aspectRatio: _controller!.value.aspectRatio,
-            child: GestureDetector(
-                onTap: () {
-                  _controller!.value.isPlaying
-                      ? _controller?.pause()
-                      : _controller?.play();
-                },
-                child: VideoPlayer(_controller!)),
-          )
-        : const Center(child: CircularProgressIndicator());
+    return Stack(
+      alignment: Alignment.bottomRight,
+      children: [
+        _controller != null && _controller!.value.isInitialized
+            ? Center(
+                child: AspectRatio(
+                  aspectRatio: _controller!.value.aspectRatio,
+                  child: GestureDetector(
+                      onTap: () {
+                        _controller!.value.isPlaying
+                            ? _controller?.pause()
+                            : _controller?.play();
+                      },
+                      child: VideoPlayer(_controller!)),
+                ),
+              )
+            : const Center(child: CircularProgressIndicator()),
+        const ReelsActionsWidget(),
+        const ReelsUserData(),
+      ],
+    );
   }
 }
