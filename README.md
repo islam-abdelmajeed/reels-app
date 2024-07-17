@@ -1,16 +1,16 @@
-# reels_app
+# Simple Reels App
 
-A new Flutter project.
+Flutter project - A simple Reels app.
 
-## Getting Started
+It's configured with [BLoC] for state management, [Dio] for networking. 
+<br>
 
-This project is a starting point for a Flutter application.
+- **IOS Screen** <br>
+![Simulator Screenshot - iPhone 14 Pro - 2024-07-17 at 13 09 38](https://github.com/user-attachments/assets/93dbcfc7-8acc-4a4b-9d2c-32754a12a4c8)
 
-A few resources to get you started if this is your first Flutter project:
+- **Android Screen** <br>
+![image](https://github.com/user-attachments/assets/679607dd-b1b8-4929-a772-2925fc074d55)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Tablet Screen** <br>
+![image](https://github.com/user-attachments/assets/bfbacb6e-e296-407b-ae71-49056f3615ba)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
